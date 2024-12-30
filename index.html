@@ -39,12 +39,10 @@
 <body>
     <h1>Test Vocacional</h1>
 
-    <!-- Introducción -->
     <div class="intro">
         <h2>¡Descubre tu Vocación!</h2>
-        <p>¿Alguna vez te has preguntado cuál es la carrera perfecta para ti? ¿Te gustaría saber en qué áreas podrías destacarte y ser verdaderamente feliz? Este test vocacional está diseñado para ayudarte a conocer más sobre tus intereses, fortalezas y pasiones.</p>
-        <p>En solo unos minutos, responderás preguntas que te guiarán hacia las opciones profesionales que mejor se adaptan a tu personalidad. Ya sea que te atraigan las ciencias, el arte, los negocios, la tecnología o las humanidades, ¡este test te ayudará a tomar el primer paso hacia un futuro brillante!</p>
-        <p><strong>¡Es momento de descubrir tu verdadero potencial!</strong></p>
+        <p>¿Alguna vez te has preguntado cuál es la carrera perfecta para ti? Este test vocacional está diseñado para ayudarte a conocer más sobre tus intereses, fortalezas y pasiones.</p>
+        <p>En solo unos minutos, responderás preguntas que te guiarán hacia las opciones profesionales que mejor se adaptan a tu personalidad. ¡Es momento de descubrir tu verdadero potencial!</p>
     </div>
 
     <p>Responde las siguientes preguntas seleccionando "Sí" o "No" según te identifiques con cada afirmación.</p>
@@ -57,21 +55,29 @@
                     <label><input type="radio" name="realista1" value="1"> Sí</label>
                     <label><input type="radio" name="realista1" value="0"> No</label>
                 </li>
-                <li>¿Prefieres actividades al aire libre como la agricultura o jardinería?
+                <li>¿Te gustaría trabajar en la construcción de edificios o infraestructura?
                     <label><input type="radio" name="realista2" value="1"> Sí</label>
                     <label><input type="radio" name="realista2" value="0"> No</label>
                 </li>
-                <li>¿Te interesan los sistemas de riego y cultivos sostenibles?
+                <li>¿Te interesa el diseño y análisis de sistemas mecánicos?
                     <label><input type="radio" name="realista3" value="1"> Sí</label>
                     <label><input type="radio" name="realista3" value="0"> No</label>
                 </li>
-                <li>¿Te gustaría trabajar en la construcción de edificios o infraestructura?
+                <li>¿Te gusta resolver problemas técnicos relacionados con máquinas y dispositivos?
                     <label><input type="radio" name="realista4" value="1"> Sí</label>
                     <label><input type="radio" name="realista4" value="0"> No</label>
                 </li>
-                <li>¿Prefieres actividades físicas sobre tareas de oficina?
+                <li>¿Te gustaría trabajar en el desarrollo de nuevos productos tecnológicos?
                     <label><input type="radio" name="realista5" value="1"> Sí</label>
                     <label><input type="radio" name="realista5" value="0"> No</label>
+                </li>
+                <li>¿Te interesa la automatización y la robótica?
+                    <label><input type="radio" name="realista6" value="1"> Sí</label>
+                    <label><input type="radio" name="realista6" value="0"> No</label>
+                </li>
+                <li>¿Prefieres actividades físicas sobre tareas de oficina?
+                    <label><input type="radio" name="realista7" value="1"> Sí</label>
+                    <label><input type="radio" name="realista7" value="0"> No</label>
                 </li>
 
                 <!-- Preguntas Investigador -->
@@ -140,6 +146,28 @@
                     <label><input type="radio" name="social5" value="0"> No</label>
                 </li>
 
+                <!-- Preguntas de Hotelería y Turismo -->
+                <li>¿Te gusta trabajar en un ambiente dinámico y multicultural?
+                    <label><input type="radio" name="turismo1" value="1"> Sí</label>
+                    <label><input type="radio" name="turismo1" value="0"> No</label>
+                </li>
+                <li>¿Te interesa ayudar a las personas a planificar sus vacaciones?
+                    <label><input type="radio" name="turismo2" value="1"> Sí</label>
+                    <label><input type="radio" name="turismo2" value="0"> No</label>
+                </li>
+                <li>¿Tienes habilidades para gestionar eventos o actividades?
+                    <label><input type="radio" name="turismo3" value="1"> Sí</label>
+                    <label><input type="radio" name="turismo3" value="0"> No</label>
+                </li>
+                <li>¿Disfrutas aprender sobre diferentes culturas y tradiciones?
+                    <label><input type="radio" name="turismo4" value="1"> Sí</label>
+                    <label><input type="radio" name="turismo4" value="0"> No</label>
+                </li>
+                <li>¿Te gustaría trabajar en la gestión de hoteles o restaurantes?
+                    <label><input type="radio" name="turismo5" value="1"> Sí</label>
+                    <label><input type="radio" name="turismo5" value="0"> No</label>
+                </li>
+
                 <!-- Nuevas preguntas para Derecho -->
                 <li>¿Te interesa estudiar leyes y abogar por la justicia?
                     <label><input type="radio" name="social6" value="1"> Sí</label>
@@ -196,13 +224,14 @@
 
     <script>
         function calculateResult() {
-            const categories = ["realista", "investigador", "artistico", "social", "medicina"];
+            const categories = ["realista", "investigador", "artistico", "social", "medicina", "turismo"];
             const careers = {
                 realista: ["Ingeniería Mecánica", "Agronomía", "Construcción"],
                 investigador: ["Ciencias Exactas", "Investigación Científica", "Medicina"],
                 artistico: ["Diseño Gráfico", "Bellas Artes", "Literatura"],
                 social: ["Psicología", "Trabajo Social", "Educación", "Derecho"],
-                medicina: ["Medicina General", "Cirugía", "Pediatría"]
+                medicina: ["Medicina General", "Cirugía", "Pediatría"],
+                turismo: ["Gestión Hotelera", "Turismo", "Agente de Viajes"]
             };
 
             let scores = {
@@ -210,7 +239,8 @@
                 investigador: 0,
                 artistico: 0,
                 social: 0,
-                medicina: 0
+                medicina: 0,
+                turismo: 0
             };
 
             categories.forEach(category => {
