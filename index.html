@@ -281,14 +281,32 @@
                 <li>¿Te gustaría trabajar en la promoción de un estilo de vida activo?
                     <label><input type="radio" name="educacionfisica4" value="1"> Sí</label>
                     <label><input type="radio" name="educacionfisica4" value="0"> No</label>
-              
+ 		</li>
                 <li>¿Te interesa el entrenamiento físico y la mejora del rendimiento?
-                    <label><input type="radio" name="educacionfisica4" value="1"> Sí</label>
-                    <label><input type="radio" name="educacionfisica4" value="0"> No</label>
-              
-
+                    <label><input type="radio" name="educacionfisica5" value="1"> Sí</label>
+                    <label><input type="radio" name="educacionfisica5" value="0"> No</label>
   		</li>
-
+		<!-- Preguntas de Educación -->
+		<li>¿Te gusta enseñar a otros?
+   		 <label><input type="radio" name="educacion1" value="1"> Sí</label>
+   		 <label><input type="radio" name="educacion1" value="0"> No</label>
+		</li>
+		<li>¿Te interesa el desarrollo de programas educativos?
+   		 <label><input type="radio" name="educacion2" value="1"> Sí</label>
+   		 <label><input type="radio" name="educacion2" value="0"> No</label>
+		</li>
+		<li>¿Disfrutas de la interacción con estudiantes?
+  		  <label><input type="radio" name="educacion3" value="1"> Sí</label>
+   		 <label><input type="radio" name="educacion3" value="0"> No</label>
+		</li>
+		<li>¿Te gustaría trabajar en la planificación de actividades educativas?
+   		 <label><input type="radio" name="educacion4" value="1"> Sí</label>
+   		 <label><input type="radio" name="educacion4" value="0"> No</label>
+		</li>
+		<li>¿Te interesa la investigación en métodos de enseñanza?
+   		 <label><input type="radio" name="educacion5" value="1"> Sí</label>
+   		 <label><input type="radio" name="educacion5" value="0"> No</label>
+		</li>
   
 
             </ol>
@@ -313,7 +331,8 @@
                 turismo: ["Administración Hotelera", "Gestión Turística"],
                 educacionfisica: ["Educación Física", "Entrenamiento Deportivo"],
                 contabilidad: ["Contaduría Pública", "Finanzas"],
-                veterinaria: ["Veterinario", "Técnico Veterinario"]
+                veterinaria: ["Veterinario", "Técnico Veterinario"],
+		educacion:   ["sicopedagogía", "Educación Especial", "Administración Educativa" , "licenciaturas"]
             };
 
             let scores = {
@@ -324,7 +343,8 @@
                 turismo: 0,
                 educacionfisica: 0,
                 contabilidad: 0,
-                veterinaria: 0
+                veterinaria: 0,
+		educacion: 0
             };
 
             categories.forEach(category => {
